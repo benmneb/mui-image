@@ -6,7 +6,7 @@
 
 ## Materialize your images... the right way.
 
-### 🏆 The only Material-UI image component to satisfy the Material guidelines for loading images.
+### The only Material-UI image component to satisfy the Material guidelines for loading images. 🕺
 
 #### _Made with ❤️ for Material-UI v5_
 
@@ -14,9 +14,11 @@
 
 ---
 
-### You're already using [Material-UI](https://mui.com)... you may as well display your images according to the Material guidelines too.
+### If you're already using [Material-UI](https://mui.com) you may as well display your images according to the Material guidelines too.
 
-> Visualize the image fading in, like a print during the photo development process. Images should begin loading with low contrast levels and desaturated color. Once image opacity reaches 100%, display the image with full-color saturation.
+> Visualize the image fading in, like a print during the photo development process.
+>
+> Images should begin loading with low contrast levels and desaturated color. Once image opacity reaches 100%, display the image with full-color saturation.
 >
 > \- [Google's Material guidelines](https://material.io/archive/guidelines/patterns/loading-images.html#loading-images-usage)
 
@@ -42,7 +44,7 @@ import { Image } from 'mui-image'
 
 ## 💰
 
----
+_Note: profits not guaranteed and MUI v5 is a peer dependency._
 
 ## Usage Examples
 
