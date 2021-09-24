@@ -1,7 +1,7 @@
 # 🌅 `mui-image`
 
 ![npm](https://img.shields.io/npm/v/mui-image?style=flat-square)
-![npm bundle size (version)](https://img.shields.io/bundlephobia/minzip/mui-image/0.1.0?style=flat-square)
+![npm bundle size (version)](https://img.shields.io/bundlephobia/minzip/mui-image?style=flat-square)
 
 ## The only Material-UI image component to satisfy the Material guidelines for loading images. 🕺
 
