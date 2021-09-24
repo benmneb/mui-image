@@ -1,37 +1,44 @@
 {
-  "name": "mui-image",
-  "version": "1.0.0",
-  "description": "mui-image React component",
-  "main": "lib/index.js",
-  "module": "es/index.js",
-  "files": [
-    "css",
-    "es",
-    "lib",
-    "umd"
-  ],
-  "scripts": {
-    "build": "nwb build-react-component",
-    "clean": "nwb clean-module && nwb clean-demo",
-    "prepublishOnly": "npm run build",
-    "start": "nwb serve-react-demo",
-    "test": "nwb test-react",
-    "test:coverage": "nwb test-react --coverage",
-    "test:watch": "nwb test-react --server"
-  },
-  "peerDependencies": {
-    "react": "16.x"
-  },
-  "devDependencies": {
-    "nwb": "0.25.x",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
-  },
-  "author": "",
-  "homepage": "",
-  "license": "MIT",
-  "repository": "",
-  "keywords": [
-    "react-component"
-  ]
+	"name": "mui-image",
+	"version": "0.1.0",
+	"description": "Easily fade/animate in images according to the Material guidelines",
+	"main": "lib/index.js",
+	"module": "es/index.js",
+	"files": [
+		"css",
+		"es",
+		"lib",
+		"umd"
+	],
+	"scripts": {
+		"build": "nwb build-react-component",
+		"clean": "nwb clean-module && nwb clean-demo",
+		"prepublishOnly": "npm run build",
+		"start": "nwb serve-react-demo",
+		"test": "nwb test-react",
+		"test:coverage": "nwb test-react --coverage",
+		"test:watch": "nwb test-react --server"
+	},
+	"peerDependencies": {
+		"@emotion/react": "^11.4.1",
+		"@emotion/styled": "^11.3.0",
+		"@mui/icons-material": "^5.0.1",
+		"@mui/material": "^5.0.1",
+		"prop-types": "^15.7.2",
+		"react": "16.x"
+	},
+	"devDependencies": {
+		"nwb": "0.25.x",
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2"
+	},
+	"author": "benmneb",
+	"homepage": "",
+	"license": "MIT",
+	"repository": "",
+	"keywords": [
+		"material-ui",
+		"material-ui-image",
+		"material design"
+	]
 }

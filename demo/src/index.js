@@ -1,15 +1,27 @@
-import React, {Component} from 'react'
-import {render} from 'react-dom'
+import React, { Component } from 'react';
+import { render } from 'react-dom';
 
-import Example from '../../src'
+import { Image } from '../../src';
 
 export default class Demo extends Component {
-  render() {
-    return <div>
-      <h1>mui-image Demo</h1>
-      <Example/>
-    </div>
-  }
+	render() {
+		return (
+			<div>
+				<h1>
+					<code>mui-image</code> Demo
+				</h1>
+				<Image
+					src="https://picsum.photos/1080"
+					bgColor="lightgrey"
+					width={500}
+					height={500}
+					showLoading
+					// style={{ position: 'absolute' }}
+					position="absolute"
+				/>
+			</div>
+		);
+	}
 }
 
-render(<Demo/>, document.querySelector('#demo'))
+render(<Demo />, document.querySelector('#demo'));
