@@ -1,26 +1,17 @@
 # 🌅 `mui-image`
 
-[![Travis][build-badge]][build]
-[![npm package][npm-badge]][npm]
-[![Coveralls][coveralls-badge]][coveralls]
+![npm](https://img.shields.io/npm/v/mui-image?style=flat-square)
+![npm bundle size (version)](https://img.shields.io/bundlephobia/minzip/mui-image/0.1.0?style=flat-square)
 
-## Materialize your images... the right way.
+## The only Material-UI image component to satisfy the Material guidelines for loading images. 🕺
 
-### The only Material-UI image component to satisfy the Material guidelines for loading images. 🕺
-
-#### _Made with ❤️ for Material-UI v5_
-
-(If you need to support legacy versions of Material-UI, use [`material-ui-image`](https://github.com/TeamWertarbyte/material-ui-image) instead.)
-
----
-
-### If you're already using [Material-UI](https://mui.com) you may as well display your images according to the Material guidelines too.
-
+> Illustrations and photographs may load and transition in three phases at staggered durations, rather than relying on opacity changes alone.
+>
 > Visualize the image fading in, like a print during the photo development process.
 >
-> Images should begin loading with low contrast levels and desaturated color. Once image opacity reaches 100%, display the image with full-color saturation.
->
 > \- [Google's Material guidelines](https://material.io/archive/guidelines/patterns/loading-images.html#loading-images-usage)
+
+### If you're already using [Material-UI v5](https://mui.com) you may as well display your images according to the Material guidelines too.
 
 ### 1. Install
 
@@ -44,7 +35,7 @@ import { Image } from 'mui-image'
 
 ## 💰
 
-_Note: profits not guaranteed and MUI v5 is a peer dependency._
+_Note: Profits not guaranteed and MUI v5 is a peer dependency. If you need to support legacy versions of Material-UI, use [`material-ui-image`](https://github.com/TeamWertarbyte/material-ui-image) instead._
 
 ## Usage Examples
 
@@ -102,8 +93,6 @@ If you want to get fancy 💃 you can also style the root wrapper `div` and load
 
 Like and subscribe below for more. ⏬
 
----
-
 ## All Props
 
 | Name             | Type             | Default                      | Description                                                                                                                |
@@ -133,9 +122,13 @@ Like and subscribe below for more. ⏬
 
 Any other props are passed directly to the native `img` element.
 
----
-
 ## Material guidelines for loading images
+
+> #### ✅ Opacity, exposure, and saturation recommendations
+>
+> <img src="https://material.io/archive/guidelines/assets/0Bx4BSt6jniD7M05lWkx3NTVncEE/patterns-loadingimages1.png" width="750">
+>
+> Images should begin loading with low contrast levels and desaturated color. Once image opacity reaches 100%, display the image with full-color saturation.
 
 > #### ✅ Progressive fade-in
 >
@@ -170,10 +163,3 @@ INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
 LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
 OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
 PERFORMANCE OF THIS SOFTWARE.
-
-[build-badge]: https://img.shields.io/travis/user/repo/master.png?style=flat-square
-[build]: https://travis-ci.org/user/repo
-[npm-badge]: https://img.shields.io/npm/v/npm-package.png?style=flat-square
-[npm]: https://www.npmjs.org/package/npm-package
-[coveralls-badge]: https://img.shields.io/coveralls/user/repo/master.png?style=flat-square
-[coveralls]: https://coveralls.io/github/user/repo
