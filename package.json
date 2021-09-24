@@ -33,7 +33,7 @@
 	},
 	"author": "benmneb",
 	"homepage": "",
-	"license": "MIT",
+	"license": "ISC",
 	"repository": "https://github.com/benmneb/mui-image",
 	"keywords": [
 		"material-ui",
