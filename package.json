@@ -1,7 +1,7 @@
 {
 	"name": "mui-image",
 	"version": "0.1.0",
-	"description": "Easily fade/animate in images according to the Material guidelines",
+	"description": "Display images as per the Material guidelines. For React apps using Material-UI v5.",
 	"main": "lib/index.js",
 	"module": "es/index.js",
 	"files": [
@@ -22,10 +22,9 @@
 	"peerDependencies": {
 		"@emotion/react": "^11.4.1",
 		"@emotion/styled": "^11.3.0",
-		"@mui/icons-material": "^5.0.1",
 		"@mui/material": "^5.0.1",
 		"prop-types": "^15.7.2",
-		"react": "16.x"
+		"react": "^17.0.2"
 	},
 	"devDependencies": {
 		"nwb": "0.25.x",
@@ -35,10 +34,11 @@
 	"author": "benmneb",
 	"homepage": "",
 	"license": "MIT",
-	"repository": "",
+	"repository": "https://github.com/benmneb/mui-image",
 	"keywords": [
 		"material-ui",
 		"material-ui-image",
-		"material design"
+		"material design",
+		"react"
 	]
 }
