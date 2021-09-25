@@ -35,7 +35,7 @@ import { Image } from 'mui-image'
 
 ## 💰
 
-_Note: Profits not guaranteed and MUI v5 is a peer dependency. If you need to support legacy versions of Material-UI, use [`material-ui-image`](https://github.com/TeamWertarbyte/material-ui-image) instead._
+_Note: Profits not guaranteed and MUI v5 is a peer dependency. If you need to support legacy versions of Material-UI, use [`material-ui-image`](https://github.com/TeamWertarbyte/material-ui-image) instead. See the [comparison chart](#comparison-with-similar-components) below for more._
 
 ## Usage Examples
 
@@ -143,6 +143,17 @@ Any other props are passed directly to the native `img` element.
 > Add a small position shift to loading images.
 
 [(Source)](https://material.io/archive/guidelines/patterns/loading-images.html#loading-images-behavior)
+
+## Comparison with similar components
+
+| Feature                       |                                                     `mui-image`                                                      |                                                     `material-ui-image`                                                      |
+| ----------------------------- | :------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------: |
+| Size (minzipped)              | ![npm bundle size](https://img.shields.io/bundlephobia/minzip/mui-image?color=%2343a047&label=%20&style=flat-square) | ![npm bundle size](https://img.shields.io/bundlephobia/minzip/material-ui-image?color=%23b71c1c&label=%20&style=flat-square) |
+| Supports MUI v5               |                                                          ✅                                                          |                                                              ❌                                                              |
+| Fade-in                       |                                                          ✅                                                          |                                                              ✅                                                              |
+| Progressive level adjustments |                                                          ✅                                                          |                                                              ❌                                                              |
+| Suggested duration            |                                                          ✅                                                          |                                                              ✅                                                              |
+| Shift animation               |                                                          ✅                                                          |                                                              ❌                                                              |
 
 ---
 
