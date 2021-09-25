@@ -154,6 +154,7 @@ Any other props are passed directly to the native `img` element.
 | Progressive level adjustments |                                                          ✅                                                          |                                                              ❌                                                              |
 | Suggested duration            |                                                          ✅                                                          |                                                              ✅                                                              |
 | Optional shift animation      |                                                          ✅                                                          |                                                              ❌                                                              |
+| Supports legacy MUI versions  |                                                          ❌                                                          |                                                              ✅                                                              |
 
 ---
 
