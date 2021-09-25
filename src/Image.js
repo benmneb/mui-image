@@ -2,8 +2,8 @@ import * as React from 'react';
 
 import PropTypes from 'prop-types';
 
-import { styled } from '@mui/material/';
-import { createSvgIcon } from '@mui/material/utils';
+import styled from '@mui/material/styles/styled';
+import createSvgIcon from '@mui/material/utils/createSvgIcon';
 import CircularProgress from '@mui/material/CircularProgress';
 
 const BrokenImageIcon = createSvgIcon(
