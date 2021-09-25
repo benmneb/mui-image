@@ -14,7 +14,7 @@ const BrokenImageIcon = createSvgIcon(
 const Img = styled('img')({
 	'@keyframes materialize': {
 		'0%': {
-			filter: 'saturate(20%) contrast(50%) brightness(150%)',
+			filter: 'saturate(20%) contrast(50%) brightness(120%)',
 		},
 		'75%': {
 			filter: 'saturate(60%) contrast(100%) brightness(100%)',
