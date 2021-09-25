@@ -179,24 +179,24 @@ export default function Demo() {
 						</Line>
 						<Tooltip title="Any valid CSS `height` property" placement="right">
 							<Line component="div">
-								height={'{'}
+								height="
 								<TextField
 									variant="standard"
 									value={height}
 									onChange={(e) => setHeight(e.target.value)}
 								/>
-								{'}'}
+								"
 							</Line>
 						</Tooltip>
 						<Tooltip title="Any valid CSS `width` property" placement="right">
 							<Line component="div">
-								width={'{'}
+								width="
 								<TextField
 									variant="standard"
 									value={width}
 									onChange={(e) => setWidth(e.target.value)}
 								/>
-								{'}'}
+								"
 							</Line>
 						</Tooltip>
 						<Tooltip
