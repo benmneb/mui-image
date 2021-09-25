@@ -93,32 +93,32 @@ If you want to get fancy 💃 you can also style the root wrapper `div` and load
 
 Like and subscribe below for more. ⏬
 
-## All Props
+## Props
 
 | Name             | Type             | Default                      | Description                                                                                                                |
 | ---------------- | ---------------- | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| src              | string           |                              | image `src` tag... _required_                                                                                              |
 | alt              | string           | ""                           | image `alt` tag value                                                                                                      |
-| height           | number / string  | "100%"                       | any valid [CSS `height` value](https://developer.mozilla.org/en-US/docs/Web/CSS/height)                                    |
-| width            | number / string  | "100%"                       | any valid [CSS `width` value](https://developer.mozilla.org/en-US/docs/Web/CSS/width)                                      |
-| position         | string           | "relative"                   | any valid [CSS `position` value](https://developer.mozilla.org/en-US/docs/Web/CSS/position)                                |
-| objectFit        | string           | "fill"                       | any valid [CSS `object-fit` value](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit#syntax)                     |
-| style            | object           |                              | inline styles for the image                                                                                                |
-| className        | string           |                              | CSS `class` for the image                                                                                                  |
-| showLoading      | boolean / node   | false                        | display default loading spinner, or your own                                                                               |
-| errorIcon        | boolean / node   | true                         | display default error icon, or your own                                                                                    |
-| shift            | boolean / string | false                        | either "left", "right", "top", "bottom", `null`, or `false`                                                                |
-| distance         | number           | 100                          | amount of pixels to shift the image                                                                                        |
-| shiftDuration    | number           | duration \* 0.3              | duration of shift in milliseconds                                                                                          |
 | bgColor          | string           | "inherit"                    | the color the image transitions in from                                                                                    |
-| wrapperStyle     | object           |                              | inline styles for the root wrapper `div`                                                                                   |
-| iconWrapperStyle | object           |                              | inline styles for the icon wrapper `div`                                                                                   |
-| wrapperClass     | string           |                              | CSS `class` for the root wrapper `div`                                                                                     |
-| iconWrapperClass | string           |                              | CSS `class` for the icon wrapper `div`                                                                                     |
+| className        | string           |                              | CSS `class` for the image                                                                                                  |
+| distance         | number           | 100                          | amount of pixels to shift the image                                                                                        |
 | duration         | number           | 3000                         | sets the CSS [`transition-duration`](https://developer.mozilla.org/en-US/docs/Web/CSS/transition-duration) in milliseconds |
 | easing           | string           | cubic-bezier(0.7, 0, 0.6, 1) | sets the CSS [`transition-timing-function`](https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing-function)   |
-| onLoad           | func             |                              | do something when the image loads                                                                                          |
-| onError          | func             |                              | do something if the image doesn't load                                                                                     |
+| errorIcon        | boolean / node   | true                         | display default error icon, or your own                                                                                    |
+| height           | number / string  | "100%"                       | any valid [CSS `height` value](https://developer.mozilla.org/en-US/docs/Web/CSS/height)                                    |
+| iconWrapperClass | string           |                              | CSS `class` for the icon wrapper `div`                                                                                     |
+| iconWrapperStyle | object           |                              | inline styles for the icon wrapper `div`                                                                                   |
+| objectFit        | string           | "contain"                    | any valid [CSS `object-fit` value](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit#syntax)                     |
+| position         | string           | "relative"                   | any valid [CSS `position` value](https://developer.mozilla.org/en-US/docs/Web/CSS/position)                                |
+| shift            | boolean / string | false                        | either "left", "right", "top", "bottom", `null`, or `false`                                                                |
+| shiftDuration    | number           | duration \* 0.3              | duration of shift in milliseconds                                                                                          |
+| showLoading      | boolean / node   | false                        | display default loading spinner, or your own                                                                               |
+| **_src_** \*     | string           |                              | image `src` tag... _required_                                                                                              |
+| style            | object           |                              | inline styles for the image                                                                                                |
+| width            | number / string  | "100%"                       | any valid [CSS `width` value](https://developer.mozilla.org/en-US/docs/Web/CSS/width)                                      |
+| wrapperClass     | string           |                              | CSS `class` for the root wrapper `div`                                                                                     |
+| wrapperStyle     | object           |                              | inline styles for the root wrapper `div`                                                                                   |
+
+\* required prop
 
 Any other props are passed directly to the native `img` element.
 
@@ -153,7 +153,7 @@ Any other props are passed directly to the native `img` element.
 | Fade-in                       |                                                          ✅                                                          |                                                              ✅                                                              |
 | Progressive level adjustments |                                                          ✅                                                          |                                                              ❌                                                              |
 | Suggested duration            |                                                          ✅                                                          |                                                              ✅                                                              |
-| Shift animation               |                                                          ✅                                                          |                                                              ❌                                                              |
+| Optional shift animation      |                                                          ✅                                                          |                                                              ❌                                                              |
 
 ---
 
