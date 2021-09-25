@@ -26,7 +26,7 @@ or
 ### 2. Use
 
 ```
-import { Image } from 'mui-image'
+import Image from 'mui-image'
 
 <Image src="my-image.png" />
 ```
