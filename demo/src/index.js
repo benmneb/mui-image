@@ -2,7 +2,9 @@ import * as React from 'react';
 
 import { render } from 'react-dom';
 
-import { Image } from '../../src';
+import TypeIt from 'typeit-react';
+
+import Image from '../../src';
 
 import {
 	styled,
@@ -24,6 +26,7 @@ import {
 } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { createSvgIcon } from '@mui/material/utils';
+
 import '@fontsource/fira-code';
 
 const theme = createTheme({
@@ -133,7 +136,19 @@ export default function Demo() {
 			>
 				<Toolbar>
 					<Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1 }}>
-						mui-image
+						<TypeIt
+							getBeforeInit={(instance) => {
+								instance
+									.pause(3500)
+									.type('npm install mui-image')
+									.pause(1500)
+									.delete()
+									.type("import Image from 'mui-image'");
+
+								return instance;
+							}}
+							options={{ speed: 120, cursor: false }}
+						/>
 					</Typography>
 					<Box>
 						<IconButton

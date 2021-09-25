@@ -30,7 +30,8 @@
 		"@fontsource/fira-code": "^4.5.1",
 		"nwb": "0.25.x",
 		"react": "^17.0.2",
-		"react-dom": "^17.0.2"
+		"react-dom": "^17.0.2",
+		"typeit-react": "^2.0.3"
 	},
 	"author": "benmneb",
 	"homepage": "https://mui-image.surge.sh/",
