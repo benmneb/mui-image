@@ -62,6 +62,9 @@ const ImageOutput = styled('article')({
 	overflow: 'hidden',
 });
 
+const DRAWER_WIDTH = 325;
+const DEFAULT_IMAGE = 674;
+
 const SHOW_LOADING = false;
 const ERROR_ICON = true;
 const HEIGHT = '100%';
@@ -74,10 +77,8 @@ const EASING = 'cubic-bezier(0.7, 0, 0.6, 1)';
 const OBJECT_FIT = 'cover';
 const BG_COLOR = 'inherit';
 
-const DRAWER_WIDTH = 325;
-
 export default function Demo() {
-	const [currentPhoto, setCurrentPhoto] = React.useState(1080);
+	const [currentPhoto, setCurrentPhoto] = React.useState(DEFAULT_IMAGE);
 	const [showPhoto, setShowPhoto] = React.useState(true);
 
 	const [showLoading, setShowLoading] = React.useState(SHOW_LOADING);
@@ -367,7 +368,7 @@ export default function Demo() {
 						variant="outlined"
 						onClick={getNewPhoto}
 					>
-						Change photo
+						Random photo
 					</Button>
 					<Button onClick={resetDefaults}>Reset defaults</Button>
 				</Stack>
