@@ -14,7 +14,7 @@ const BrokenImageIcon = createSvgIcon(
 const Img = styled('img')({
 	'@keyframes materialize': {
 		'0%': {
-			filter: 'saturate(20%) contrast(50%) brightness(110%)',
+			filter: 'saturate(20%) contrast(50%) brightness(150%)',
 		},
 		'75%': {
 			filter: 'saturate(60%) contrast(100%) brightness(100%)',
@@ -140,7 +140,7 @@ Image.defaultProps = {
 	height: '100%',
 	width: '100%',
 	position: 'relative',
-	objectFit: 'fill',
+	objectFit: 'cover',
 	showLoading: false,
 	errorIcon: true,
 	shift: false,
@@ -173,7 +173,6 @@ Image.propTypes = {
 	onLoad: PropTypes.func,
 	onError: PropTypes.func,
 	position: PropTypes.oneOf([
-		// test these
 		'static',
 		'relative',
 		'absolute',
