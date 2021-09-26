@@ -32,7 +32,7 @@ export default function Image(props) {
 		height,
 		width,
 		position,
-		objectFit,
+		fit,
 		style,
 		className,
 		showLoading,
@@ -85,8 +85,8 @@ export default function Image(props) {
 			position: position,
 			width: '100%',
 			height: '100%',
-			objectFit: objectFit,
-			transitionProperty: `${Boolean(shift) ? shift + ',' : ''} opacity`,
+			objectFit: fit,
+			transitionProperty: `${Boolean(shift) ? shift + ', ' : ''}opacity`,
 			transitionDuration: `${
 				Boolean(shift) ? (shiftDuration || duration * 0.3) + 'ms, ' : ''
 			}${duration / 2}ms`,
@@ -140,7 +140,7 @@ Image.defaultProps = {
 	height: '100%',
 	width: '100%',
 	position: 'relative',
-	objectFit: 'cover',
+	fit: 'cover',
 	showLoading: false,
 	errorIcon: true,
 	shift: false,
@@ -161,7 +161,7 @@ Image.propTypes = {
 	showLoading: PropTypes.oneOfType([PropTypes.bool, PropTypes.node]),
 	errorIcon: PropTypes.oneOfType([PropTypes.bool, PropTypes.node]),
 	shift: PropTypes.oneOf([false, null, 'top', 'bottom', 'left', 'right']),
-	distance: PropTypes.number,
+	distance: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 	shiftDuration: PropTypes.number,
 	bgColor: PropTypes.string,
 	wrapperStyle: PropTypes.object,
@@ -183,7 +183,7 @@ Image.propTypes = {
 		'revert',
 		'unset',
 	]),
-	objectFit: PropTypes.oneOf([
+	fit: PropTypes.oneOf([
 		'contain',
 		'cover',
 		'fill',

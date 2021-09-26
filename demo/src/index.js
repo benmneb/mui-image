@@ -73,11 +73,11 @@ const ERROR_ICON = true;
 const HEIGHT = '100%';
 const WIDTH = '100%';
 const SHIFT = false;
-const DISTANCE = 100;
+const DISTANCE = '100px';
 const SHIFT_DURATION = null;
 const DURATION = 3000;
 const EASING = 'cubic-bezier(0.7, 0, 0.6, 1)';
-const OBJECT_FIT = 'cover';
+const FIT = 'cover';
 const BG_COLOR = 'inherit';
 
 export default function Demo() {
@@ -93,7 +93,7 @@ export default function Demo() {
 	const [shiftDuration, setShiftDuration] = React.useState(SHIFT_DURATION);
 	const [duration, setDuration] = React.useState(DURATION);
 	const [easing, setEasing] = React.useState(EASING);
-	const [objectFit, setObjectFit] = React.useState(OBJECT_FIT);
+	const [fit, setFit] = React.useState(FIT);
 	const [bgColor, setBgColor] = React.useState(BG_COLOR);
 
 	function getNewPhoto() {
@@ -122,7 +122,7 @@ export default function Demo() {
 		setShiftDuration(SHIFT_DURATION);
 		setDuration(DURATION);
 		setEasing(EASING);
-		setObjectFit(OBJECT_FIT);
+		setFit(FIT);
 		setBgColor(BG_COLOR);
 	}
 
@@ -220,11 +220,11 @@ export default function Demo() {
 							placement="right"
 						>
 							<Line component="div">
-								objectFit=
+								fit=
 								<Select
 									variant="standard"
-									value={objectFit}
-									onChange={(e) => setObjectFit(e.target.value)}
+									value={fit}
+									onChange={(e) => setFit(e.target.value)}
 									sx={{ minWidth: 100 }}
 								>
 									<MenuItem value="fill">"fill"</MenuItem>
@@ -307,12 +307,15 @@ export default function Demo() {
 								/>
 							</Line>
 						</Tooltip>
-						<Tooltip title="Direction to shift image on load" placement="right">
+						<Tooltip
+							title="Direction to shift image after it loads"
+							placement="right"
+						>
 							<Line component="div">
 								shift=
 								<Select
 									variant="standard"
-									value={shift || ''}
+									value={shift || 'null'}
 									onChange={(e) => setShift(e.target.value)}
 									sx={{ minWidth: 100 }}
 								>
@@ -324,18 +327,15 @@ export default function Demo() {
 								</Select>
 							</Line>
 						</Tooltip>
-						<Tooltip
-							title="Number of pixels to shift image on load"
-							placement="right"
-						>
+						<Tooltip title="Any valid CSS `length` property" placement="right">
 							<Line component="div">
-								distance={'{'}
+								distance="
 								<TextField
 									variant="standard"
 									value={distance}
 									onChange={(e) => setDistance(e.target.value)}
 								/>
-								{'}'}
+								"
 							</Line>
 						</Tooltip>
 						<Tooltip
@@ -403,7 +403,7 @@ export default function Demo() {
 							distance={distance}
 							shiftDuration={shiftDuration}
 							easing={easing}
-							objectFit={objectFit}
+							fit={fit}
 							bgColor={bgColor}
 						/>
 					)}

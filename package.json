@@ -1,6 +1,6 @@
 {
 	"name": "mui-image",
-	"version": "0.1.2",
+	"version": "0.1.3",
 	"description": "Display images as per the Material guidelines. For React apps using Material-UI v5.",
 	"main": "lib/index.js",
 	"module": "es/index.js",
