@@ -1,4 +1,4 @@
-<div align="center" style="font-size:3rem">
+<div align="center" style="font-size:42px">
     <p><span>🌅</span><br /><code>mui-image</code></p>
 </div>
 <p align="center">
