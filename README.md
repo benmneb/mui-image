@@ -1,15 +1,15 @@
-<div align="center" style="font-size:42px">
-    <p><span>🌅</span><br /><code>mui-image</code></p>
+<div align="center">
+    <h1><span>🌅</span><br /><code>mui-image</code></h1>
 </div>
+<p align="center">
+  The only Material-UI image component to satisfy the Material guidelines for loading images.
+</p>
 <p align="center">
   <img src="https://img.shields.io/npm/v/mui-image?style=flat-square" />
   <img src="https://img.shields.io/bundlephobia/minzip/mui-image?style=flat-square" />
 </p>
 <p align="center">
   <strong><a href="https://mui-image.surge.sh">Demo Playground ↗️</a></strong> <br />
-</p>
-<p align="center">
-  The only Material-UI image component to satisfy the Material guidelines for loading images
 </p>
 <br />
 
