@@ -1,5 +1,5 @@
-<div align="center">
-    <h1><span>🌅</span><br /><code>mui-image</code></h1>
+<div align="center" style="font-size:3rem">
+    <p><span>🌅</span><br /><code>mui-image</code></p>
 </div>
 <p align="center">
   <img src="https://img.shields.io/npm/v/mui-image?style=flat-square" />
