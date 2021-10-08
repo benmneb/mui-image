@@ -23,6 +23,7 @@ import {
 	Tooltip,
 	Typography,
 	Toolbar,
+	useMediaQuery,
 } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { createSvgIcon } from '@mui/material/utils';
@@ -48,6 +49,16 @@ const GitHubIcon = createSvgIcon(
 	'GitHubIcon'
 );
 
+const CodeIcon = createSvgIcon(
+	<path d="M9.4 16.6 4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0 4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z" />,
+	'CodeIcon'
+);
+
+const CodeOffIcon = createSvgIcon(
+	<path d="m19.17 12-4.58-4.59L16 6l6 6-3.59 3.59L17 14.17 19.17 12zM1.39 4.22l4.19 4.19L2 12l6 6 1.41-1.41L4.83 12 7 9.83l12.78 12.78 1.41-1.41L2.81 2.81 1.39 4.22z" />,
+	'CodeOffIcon'
+);
+
 const Line = styled(Box)({
 	display: 'flex',
 	alignItems: 'center',
@@ -60,7 +71,6 @@ const ImageOutput = styled('article')({
 	display: 'flex',
 	justifyContent: 'center',
 	alignItems: 'center',
-	maxHeight: `calc(100vh - 64px)`,
 	height: '100%',
 	overflow: 'hidden',
 });
@@ -97,6 +107,7 @@ export default function Demo() {
 	const [bgColor, setBgColor] = React.useState(BG_COLOR);
 
 	function getNewPhoto() {
+		if (mobileOpen) setMobileOpen(false);
 		const newPhoto = Math.floor(Math.random() * 1051);
 		setShowPhoto(false);
 		setCurrentPhoto(newPhoto);
@@ -106,6 +117,7 @@ export default function Demo() {
 	}
 
 	function refreshPhoto() {
+		if (mobileOpen) setMobileOpen(false);
 		setShowPhoto(false);
 		setTimeout(() => {
 			setShowPhoto(true);
@@ -126,6 +138,14 @@ export default function Demo() {
 		setBgColor(BG_COLOR);
 	}
 
+	const [mobileOpen, setMobileOpen] = React.useState(false);
+
+	const mobile = useMediaQuery('@media (max-width: 900px)');
+
+	function handleDrawerToggle() {
+		setMobileOpen(!mobileOpen);
+	}
+
 	return (
 		<Box sx={{ display: 'flex', height: '100vh' }}>
 			<CssBaseline />
@@ -135,7 +155,21 @@ export default function Demo() {
 				sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}
 			>
 				<Toolbar>
-					<Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1 }}>
+					<IconButton
+						color="inherit"
+						aria-label="open drawer"
+						edge="start"
+						onClick={handleDrawerToggle}
+						sx={{ mr: 2, display: { md: 'none' } }}
+					>
+						{mobileOpen ? <CodeOffIcon /> : <CodeIcon />}
+					</IconButton>
+					<Typography
+						variant="h6"
+						noWrap
+						component="div"
+						sx={{ flexGrow: 1, display: { xs: 'none', md: 'inline-block' } }}
+					>
 						<TypeIt
 							getBeforeInit={(instance) => {
 								instance
@@ -150,7 +184,15 @@ export default function Demo() {
 							options={{ speed: 120, cursor: false }}
 						/>
 					</Typography>
-					<Box>
+					<Typography
+						variant="h6"
+						noWrap
+						component="div"
+						sx={{ flexGrow: 1, display: { xs: 'inline-block', md: 'none' } }}
+					>
+						mui-image
+					</Typography>
+					<Box display="flex">
 						<IconButton
 							onClick={() => window.open('https://npmjs.com/package/mui-image')}
 							color="inherit"
@@ -169,12 +211,19 @@ export default function Demo() {
 				</Toolbar>
 			</AppBar>
 			<Drawer
-				variant="permanent"
+				variant={mobile ? 'temporary' : 'permanent'}
+				open={mobile ? mobileOpen : true}
+				onClose={handleDrawerToggle}
+				ModalProps={{
+					keepMounted: true,
+				}}
 				sx={{
 					width: DRAWER_WIDTH,
+					maxWidth: '100vw',
 					flexShrink: 0,
-					[`& .MuiDrawer-paper`]: {
+					'& .MuiDrawer-paper': {
 						width: DRAWER_WIDTH,
+						maxWidth: '100vw',
 						boxSizing: 'border-box',
 					},
 				}}
@@ -184,7 +233,7 @@ export default function Demo() {
 					spacing={2}
 					component="section"
 					padding={2}
-					sx={{ minWidth: 300 }}
+					sx={{ minWidth: '100%' }}
 				>
 					<Box component="div" variant="h6">
 						{'<Image'}
@@ -390,7 +439,11 @@ export default function Demo() {
 			</Drawer>
 			<Box component="section" sx={{ flexGrow: 1, backgroundColor: bgColor }}>
 				<Toolbar />
-				<ImageOutput>
+				<ImageOutput
+					sx={{
+						maxHeight: { xs: 'calc(100vh - 56px)', sm: 'calc(100vh - 64px)' },
+					}}
+				>
 					{showPhoto && (
 						<Image
 							src={`https://picsum.photos/id/${currentPhoto}/2000`}
