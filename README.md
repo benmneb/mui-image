@@ -11,7 +11,6 @@
 <p align="center">
   <strong><a href="https://mui-image.surge.sh">Demo Playground ↗️</a></strong> <br />
 </p>
-<br />
 
 ### If you're already using [Material-UI v5](https://mui.com), why not display your images according to the Material guidelines too?
 
@@ -34,7 +33,13 @@ or
 ### 2. Use
 
 ```
-import Image from 'mui-image' || import { Image } from 'mui-image'
+import Image from 'mui-image'
+
+// or
+
+import { Image } from 'mui-image'
+
+// then
 
 <Image src="my-image.png" />
 ```
@@ -161,8 +166,6 @@ Any other props (eg. `sx`, `onLoad`) are passed directly to the native `img` ele
 | Suggested duration            |                                                          ✅                                                          |                                                              ✅                                                              |
 | Optional shift animation      |                                                          ✅                                                          |                                                              ❌                                                              |
 | Supports legacy MUI versions  |                                                          ❌                                                          |                                                              ✅                                                              |
-
----
 
 ## License
 
