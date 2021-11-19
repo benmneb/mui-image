@@ -125,7 +125,7 @@ export default function Image(props) {
 				onError={handleError}
 				{...rest}
 			/>
-			{Boolean(showLoading) && Boolean(errorIcon) && (
+			{(Boolean(showLoading) || Boolean(errorIcon)) && (
 				<div style={styles.icons} className={iconWrapperClass}>
 					{Boolean(errorIcon) && error && showErrorIcon}
 					{Boolean(showLoading) && !error && !loaded && loadingIndicator}
