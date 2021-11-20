@@ -284,7 +284,10 @@ export default function Demo() {
 								</Select>
 							</Line>
 						</Tooltip>
-						<Tooltip title="Number of milliseconds" placement="right">
+						<Tooltip
+							title="Number of milliseconds the image takes to transition in"
+							placement="right"
+						>
 							<Line component="div">
 								duration={'{'}
 								<TextField
@@ -357,7 +360,7 @@ export default function Demo() {
 							</Line>
 						</Tooltip>
 						<Tooltip
-							title="Direction to shift image after it loads"
+							title="Direction to shift image as it appears"
 							placement="right"
 						>
 							<Line component="div">
@@ -376,7 +379,10 @@ export default function Demo() {
 								</Select>
 							</Line>
 						</Tooltip>
-						<Tooltip title="Any valid CSS `length` property" placement="right">
+						<Tooltip
+							title="Distance to shift the image as it appears. Any valid CSS `length` property"
+							placement="right"
+						>
 							<Line component="div">
 								distance="
 								<TextField
@@ -402,7 +408,7 @@ export default function Demo() {
 							</Line>
 						</Tooltip>
 						<Tooltip
-							title="Color the image transitions in from"
+							title="Color the image transitions in from. Any valid CSS `background-color` property"
 							placement="right"
 						>
 							<Line component="div">
