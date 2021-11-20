@@ -23,11 +23,13 @@
 ### 1. Install
 
 ```
-> npm i mui-image
+npm i mui-image
+```
 
 or
 
-> yarn add mui-image
+```
+yarn add mui-image
 ```
 
 ### 2. Use
@@ -102,34 +104,34 @@ And of course, you can style `mui-image` like you would a regular image... but w
 <Image src="my-exgf.tiff" sx={{ display: { sm: 'none', lg: 'inline' }}} />
 ```
 
-If you want to get fancy 💃 you can also add inline styles and classNames to the root wrapper `div` and loading/error icon wrapper `div`. This allows for complete customisation of every aspect of the component.
+If you want to get fancy 💃 you can also add inline styles and additional `className`'s to the root wrapper `div` and loading/error icon wrapper `div`, or just target their default `className`'s. This allows for complete customisation of every aspect of the component.
 
 Like and subscribe below for more. ⏬
 
 ## Props
 
-| Name             | Type             | Default                      | Description                                                                                                                |
-| ---------------- | ---------------- | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| alt              | string           | ""                           | image `alt` tag value                                                                                                      |
-| bgColor          | string           | "inherit"                    | the color the image transitions in from                                                                                    |
-| className        | string           |                              | CSS `class` for the image                                                                                                  |
-| distance         | string / number  | 100                          | any valid [CSS `length` value](https://developer.mozilla.org/en-US/docs/Web/CSS/length#units) (for the shift)              |
-| duration         | number           | 3000                         | sets the CSS [`transition-duration`](https://developer.mozilla.org/en-US/docs/Web/CSS/transition-duration) in milliseconds |
-| easing           | string           | cubic-bezier(0.7, 0, 0.6, 1) | sets the CSS [`transition-timing-function`](https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing-function)   |
-| errorIcon        | boolean / node   | true                         | display default error icon, or your own                                                                                    |
-| fit              | string           | "contain"                    | any valid [CSS `object-fit` value](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit#syntax)                     |
-| height           | number / string  | "100%"                       | any valid [CSS `height` value](https://developer.mozilla.org/en-US/docs/Web/CSS/height)                                    |
-| iconWrapperClass | string           |                              | CSS `class` for the icon wrapper `div`                                                                                     |
-| iconWrapperStyle | object           |                              | inline styles for the icon wrapper `div`                                                                                   |
-| position         | string           | "relative"                   | any valid [CSS `position` value](https://developer.mozilla.org/en-US/docs/Web/CSS/position)                                |
-| shift            | boolean / string | false                        | either "left", "right", "top", "bottom", `null`, or `false`                                                                |
-| shiftDuration    | number           | duration \* 0.3              | duration of shift in milliseconds                                                                                          |
-| showLoading      | boolean / node   | false                        | display default loading spinner, or your own                                                                               |
-| **_src_** \*     | string           |                              | image `src` tag... _required_                                                                                              |
-| style            | object           |                              | inline styles for the image                                                                                                |
-| width            | number / string  | "100%"                       | any valid [CSS `width` value](https://developer.mozilla.org/en-US/docs/Web/CSS/width)                                      |
-| wrapperClass     | string           |                              | CSS `class` for the root wrapper `div`                                                                                     |
-| wrapperStyle     | object           |                              | inline styles for the root wrapper `div`                                                                                   |
+| Name                 | Type             | Default                      | Description                                                                                                                |
+| -------------------- | ---------------- | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| alt                  | string           | ""                           | image `alt` tag value                                                                                                      |
+| bgColor              | string           | "inherit"                    | the color the image transitions in from                                                                                    |
+| className            | string           | "mui-image-img"              | CSS `class` for the image                                                                                                  |
+| distance             | string / number  | 100                          | any valid [CSS `length` value](https://developer.mozilla.org/en-US/docs/Web/CSS/length#units) (for the shift)              |
+| duration             | number           | 3000                         | sets the CSS [`transition-duration`](https://developer.mozilla.org/en-US/docs/Web/CSS/transition-duration) in milliseconds |
+| easing               | string           | cubic-bezier(0.7, 0, 0.6, 1) | sets the CSS [`transition-timing-function`](https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing-function)   |
+| errorIcon            | boolean / node   | true                         | display default error icon, or your own                                                                                    |
+| fit                  | string           | "contain"                    | any valid [CSS `object-fit` value](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit#syntax)                     |
+| height               | number / string  | "100%"                       | any valid [CSS `height` value](https://developer.mozilla.org/en-US/docs/Web/CSS/height)                                    |
+| iconWrapperClassName | string           | "mui-image-iconWrapper"      | CSS `class` for the icon wrapper `div`                                                                                     |
+| iconWrapperStyle     | object           |                              | inline styles for the icon wrapper `div`                                                                                   |
+| position             | string           | "relative"                   | any valid [CSS `position` value](https://developer.mozilla.org/en-US/docs/Web/CSS/position)                                |
+| shift                | boolean / string | false                        | either "left", "right", "top", "bottom", `null`, or `false`                                                                |
+| shiftDuration        | number           | duration \* 0.3              | duration of shift in milliseconds                                                                                          |
+| showLoading          | boolean / node   | false                        | display default loading spinner, or your own                                                                               |
+| **_src_** \*         | string           |                              | image `src` tag... _required_                                                                                              |
+| style                | object           |                              | inline styles for the image                                                                                                |
+| width                | number / string  | "100%"                       | any valid [CSS `width` value](https://developer.mozilla.org/en-US/docs/Web/CSS/width)                                      |
+| wrapperClassName     | string           | "mui-image-wrapper"          | CSS `class` for the root wrapper `div`                                                                                     |
+| wrapperStyle         | object           |                              | inline styles for the root wrapper `div`                                                                                   |
 
 \* required prop
 

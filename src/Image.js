@@ -43,8 +43,8 @@ export default function Image(props) {
 		bgColor,
 		wrapperStyle,
 		iconWrapperStyle,
-		wrapperClass,
-		iconWrapperClass,
+		wrapperClassName,
+		iconWrapperClassName,
 		duration,
 		easing,
 		onLoad: onLoadProp,
@@ -73,8 +73,8 @@ export default function Image(props) {
 
 	const styles = {
 		root: {
-			width: width,
-			height: height,
+			width,
+			height,
 			display: 'flex',
 			justifyContent: 'center',
 			alignItems: 'center',
@@ -82,13 +82,13 @@ export default function Image(props) {
 			...wrapperStyle,
 		},
 		image: {
-			position: position,
+			position,
 			width: '100%',
 			height: '100%',
 			objectFit: fit,
-			transitionProperty: `${Boolean(shift) ? shift + ', ' : ''}opacity`,
+			transitionProperty: `${Boolean(shift) ? `${shift}, ` : ''}opacity`,
 			transitionDuration: `${
-				Boolean(shift) ? (shiftDuration || duration * 0.3) + 'ms, ' : ''
+				Boolean(shift) ? `${shiftDuration || duration * 0.3}ms, ` : ''
 			}${duration / 2}ms`,
 			transitionTimingFunction: easing,
 			opacity: loaded ? 1 : 0,
@@ -115,18 +115,24 @@ export default function Image(props) {
 		showLoading) || <CircularProgress size={56} thickness={6} />;
 
 	return (
-		<div style={styles.root} className={wrapperClass}>
+		<div
+			style={styles.root}
+			className={`mui-image-wrapper ${wrapperClassName}`}
+		>
 			<Img
 				src={src}
 				alt={alt}
 				style={styles.image}
-				className={className}
+				className={`mui-image-img ${className}`}
 				onLoad={handleLoad}
 				onError={handleError}
 				{...rest}
 			/>
 			{(Boolean(showLoading) || Boolean(errorIcon)) && (
-				<div style={styles.icons} className={iconWrapperClass}>
+				<div
+					style={styles.icons}
+					className={`mui-image-iconWrapper ${iconWrapperClassName}`}
+				>
 					{Boolean(errorIcon) && error && showErrorIcon}
 					{Boolean(showLoading) && !error && !loaded && loadingIndicator}
 				</div>
@@ -149,6 +155,9 @@ Image.defaultProps = {
 	bgColor: 'inherit',
 	duration: 3000,
 	easing: 'cubic-bezier(0.7, 0, 0.6, 1)', // "heavy move" from https://sprawledoctopus.com/easing/
+	className: '',
+	wrapperClassName: '',
+	iconWrapperClassName: '',
 };
 
 Image.propTypes = {
@@ -166,8 +175,8 @@ Image.propTypes = {
 	bgColor: PropTypes.string,
 	wrapperStyle: PropTypes.object,
 	iconWrapperStyle: PropTypes.object,
-	wrapperClass: PropTypes.string,
-	iconWrapperClass: PropTypes.string,
+	wrapperClassName: PropTypes.string,
+	iconWrapperClassName: PropTypes.string,
 	duration: PropTypes.number,
 	easing: PropTypes.string,
 	onLoad: PropTypes.func,
