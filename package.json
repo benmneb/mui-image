@@ -3,6 +3,7 @@
 	"version": "1.0.4",
 	"description": "Display images as per the Material guidelines. For React apps using Material-UI v5.",
 	"main": "lib/index.js",
+	"types": "./lib/index.d.ts",
 	"module": "es/index.js",
 	"files": [
 		"css",
