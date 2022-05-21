@@ -1,8 +1,7 @@
-/coverage
-/demo/dist
-/es
-/lib
-/node_modules
-/umd
-npm-debug.log*
 .DS_Store
+/node_modules
+.cache
+dist
+/example/node_modules
+/example/.cache
+/example/dist

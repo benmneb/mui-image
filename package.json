@@ -1,49 +1,69 @@
 {
-	"name": "mui-image",
-	"version": "1.0.4",
-	"description": "Display images as per the Material guidelines. For React apps using Material-UI v5.",
-	"main": "lib/index.js",
-	"types": "./lib/index.d.ts",
-	"module": "es/index.js",
-	"files": [
-		"css",
-		"es",
-		"lib",
-		"umd"
-	],
-	"scripts": {
-		"build": "nwb build-react-component",
-		"clean": "nwb clean-module && nwb clean-demo",
-		"prepublishOnly": "npm run build",
-		"start": "nwb serve-react-demo",
-		"test": "nwb test-react",
-		"test:coverage": "nwb test-react --coverage",
-		"test:watch": "nwb test-react --server"
-	},
-	"peerDependencies": {
-		"@emotion/react": "^11.4.1",
-		"@emotion/styled": "^11.3.0",
-		"@mui/material": "^5.0.1",
-		"prop-types": "^15.7.2",
-		"react": "^17.0.2"
-	},
-	"devDependencies": {
-		"@fontsource/fira-code": "^4.5.1",
-		"nwb": "0.25.x",
-		"react": "^17.0.2",
-		"react-dom": "^17.0.2",
-		"typeit-react": "^2.0.3"
-	},
-	"author": "benmneb",
-	"homepage": "https://mui-image.surge.sh/",
-	"license": "ISC",
-	"repository": "https://github.com/benmneb/mui-image",
-	"keywords": [
-		"material-ui",
-		"material-ui image",
-		"material-ui-image",
-		"material design",
-		"react",
-		"loading image"
-	]
+  "version": "0.1.1",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test --passWithNoTests",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build",
+    "size": "size-limit",
+    "analyze": "size-limit --why"
+  },
+  "peerDependencies": {
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "@mui/material": "^5.6.4",
+    "prop-types": "^15.8.1",
+    "react": ">=16"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "name": "mui-image-ts",
+  "author": "benmneb",
+  "module": "dist/mui-image-ts.esm.js",
+  "size-limit": [
+    {
+      "path": "dist/mui-image-ts.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/mui-image-ts.esm.js",
+      "limit": "10 KB"
+    }
+  ],
+  "devDependencies": {
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "@mui/material": "^5.6.4",
+    "@size-limit/preset-small-lib": "^7.0.8",
+    "@types/react": "^18.0.9",
+    "@types/react-dom": "^18.0.3",
+    "husky": "^7.0.4",
+    "prop-types": "^15.8.1",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "size-limit": "^7.0.8",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.4.0",
+    "typescript": "^4.6.4"
+  }
 }
