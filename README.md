@@ -50,6 +50,8 @@ import { Image } from 'mui-image'
 
 _Note: Profits not guaranteed and MUI v5 is a peer dependency. If you need to support legacy versions of Material-UI, use [`material-ui-image`](https://github.com/TeamWertarbyte/material-ui-image) instead. See the [comparison chart](#comparison-with-similar-components) below for more._
 
+#### _Using Typescript? You can now add [`@types/mui-image`](https://www.npmjs.com/package/@types/mui-image) for full support_ 🥳
+
 ## Usage Examples
 
 You can use `mui-image` like a regular image.
