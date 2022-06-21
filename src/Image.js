@@ -87,8 +87,9 @@ export default function Image(props) {
 			height: '100%',
 			objectFit: fit,
 			transitionProperty: `${Boolean(shift) ? `${shift}, ` : ''}opacity`,
-			transitionDuration: `${Boolean(shift) ? `${shiftDuration || duration * 0.3}ms, ` : ''
-				}${duration / 2}ms`,
+			transitionDuration: `${
+				Boolean(shift) ? `${shiftDuration || duration * 0.3}ms, ` : ''
+			}${duration / 2}ms`,
 			transitionTimingFunction: easing,
 			opacity: loaded ? 1 : 0,
 			animation: loaded ? `materialize ${duration}ms 1 ${easing}` : '',
