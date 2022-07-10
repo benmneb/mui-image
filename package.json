@@ -17,7 +17,8 @@
 		"start": "nwb serve-react-demo",
 		"test": "nwb test-react",
 		"test:coverage": "nwb test-react --coverage",
-		"test:watch": "nwb test-react --server"
+		"test:watch": "nwb test-react --server",
+		"size": "size-limit"
 	},
 	"peerDependencies": {
 		"@emotion/react": "^11.4.1",
@@ -28,11 +29,18 @@
 	},
 	"devDependencies": {
 		"@fontsource/fira-code": "^4.5.1",
+		"@size-limit/preset-small-lib": "^7.0.8",
 		"nwb": "0.25.2",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
+		"size-limit": "^7.0.8",
 		"typeit-react": "^2.0.3"
 	},
+	"size-limit": [
+		{
+			"path": "es/index.js"
+		}
+	],
 	"author": "benmneb",
 	"homepage": "https://mui-image.surge.sh/",
 	"license": "ISC",
