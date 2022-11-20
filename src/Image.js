@@ -25,7 +25,7 @@ const Img = styled('img')({
 	},
 });
 
-export default React.forwardRef(function Image(props, ref) {
+export default function Image(props) {
 	const {
 		src,
 		alt,
@@ -127,7 +127,6 @@ export default React.forwardRef(function Image(props, ref) {
 				onLoad={handleLoad}
 				onError={handleError}
 				{...rest}
-				ref={ref}
 			/>
 			{(Boolean(showLoading) || Boolean(errorIcon)) && (
 				<div
@@ -140,7 +139,7 @@ export default React.forwardRef(function Image(props, ref) {
 			)}
 		</div>
 	);
-});
+}
 
 Image.defaultProps = {
 	alt: '',
