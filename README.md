@@ -2,7 +2,7 @@
     <h1><span>🌅</span><br /><code>mui-image</code></h1>
 </div>
 <p align="center">
-  The only Material-UI image component to satisfy the Material guidelines for loading images.
+  The only Material UI image component to satisfy the Material Design guidelines for loading images.
 </p>
 <p align="center">
   <img src="https://img.shields.io/npm/v/mui-image?style=flat-square" />
@@ -12,7 +12,7 @@
   <strong><a href="https://mui-image.surge.sh">Demo Playground ↗️</a></strong> <br />
 </p>
 
-### If you're already using [Material-UI v5](https://mui.com), why not display your images according to the Material guidelines too?
+### If you're already using [Material UI v5](https://material-ui.com), why not display your images according to the Material guidelines too?
 
 > Illustrations and photographs may load and transition in three phases at staggered durations, rather than relying on opacity changes alone.
 >
@@ -50,7 +50,7 @@ import { Image } from 'mui-image'
 
 ### 3. Profit 💰
 
-_Note: Profits not guaranteed and MUI v5 is a peer dependency. If you need to support legacy versions of Material-UI, use [`material-ui-image`](https://github.com/TeamWertarbyte/material-ui-image) instead. See the [comparison chart](#comparison-with-similar-components) below for more._
+_Note: Profits not guaranteed and Material UI v5 is a peer dependency. If you need to support legacy versions of Material UI, use [`material-ui-image`](https://github.com/TeamWertarbyte/material-ui-image) instead. See the [comparison chart](#comparison-with-similar-components) below for more._
 
 ## Usage Examples
 
@@ -69,7 +69,7 @@ Add a `height` and/or `width` to reserve space on the page for the image and avo
 <Image src="my-image.png" height="90vh" />
 ```
 
-Apply the `showLoading` prop to add a progress indicator to let your fans know something amazing is coming. You can use the default MUI indicator or bring your own. 😎
+Apply the `showLoading` prop to add a progress indicator to let your fans know something amazing is coming. You can use the default Material UI indicator or bring your own. 😎
 
 ```
 <Image src="my-image.png" showLoading />
@@ -98,7 +98,7 @@ To add that extra bit of spice 🌶 you can do exactly what Google suggests and 
 <Image src="my-gosh.gif" shift="top" distance="2rem" shiftDuration={320} />
 ```
 
-And of course, you can style `mui-image` like you would a regular image... but with the addition of the MUI v5 `sx` prop and [all the benefits](https://mui.com/system/the-sx-prop/) it brings. 😏
+And of course, you can style `mui-image` like you would a regular image... but with the addition of the Material UI v5 `sx` prop and [all the benefits](https://mui.com/system/the-sx-prop/) it brings. 😏
 
 ```
 <Image src="my-self.jpeg" style={{ borderRadius: 16 }} />
