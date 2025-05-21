@@ -25,33 +25,31 @@ const Img = styled('img')({
 	},
 });
 
-export default function Image(props) {
-	const {
-		src,
-		alt,
-		height,
-		width,
-		position,
-		fit,
-		style,
-		className,
-		showLoading,
-		errorIcon,
-		shift,
-		distance,
-		shiftDuration,
-		bgColor,
-		wrapperStyle,
-		iconWrapperStyle,
-		wrapperClassName,
-		iconWrapperClassName,
-		duration,
-		easing,
-		onLoad: onLoadProp,
-		onError: onErrorProp,
-		...rest
-	} = props;
-
+export default function Image({
+	src,
+	style,
+	wrapperStyle,
+	iconWrapperStyle,
+	onLoad: onLoadProp,
+	onError: onErrorProp,
+	alt = '',
+	height = '100%',
+	width = '100%',
+	position = 'relative',
+	fit = 'cover',
+	showLoading = false,
+	errorIcon = true,
+	shift = false,
+	distance = 100,
+	shiftDuration = null,
+	bgColor = 'inherit',
+	duration = 3000,
+	easing = 'cubic-bezier(0.7, 0, 0.6, 1)', // "heavy move" from https://sprawledoctopus.com/easing/
+	className = '',
+	wrapperClassName = '',
+	iconWrapperClassName = '',
+	...rest
+}) {
 	const [loaded, setLoaded] = React.useState(false);
 	const [error, setError] = React.useState(false);
 
@@ -140,25 +138,6 @@ export default function Image(props) {
 		</div>
 	);
 }
-
-Image.defaultProps = {
-	alt: '',
-	height: '100%',
-	width: '100%',
-	position: 'relative',
-	fit: 'cover',
-	showLoading: false,
-	errorIcon: true,
-	shift: false,
-	distance: 100,
-	shiftDuration: null,
-	bgColor: 'inherit',
-	duration: 3000,
-	easing: 'cubic-bezier(0.7, 0, 0.6, 1)', // "heavy move" from https://sprawledoctopus.com/easing/
-	className: '',
-	wrapperClassName: '',
-	iconWrapperClassName: '',
-};
 
 Image.propTypes = {
 	src: PropTypes.string.isRequired,
