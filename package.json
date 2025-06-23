@@ -34,7 +34,7 @@
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"size-limit": "^7.0.8",
-		"typeit-react": "^2.0.3"
+		"typeit-react": "^2.7.8"
 	},
 	"size-limit": [
 		{
