@@ -12,7 +12,7 @@
   <strong><a href="https://mui-image.surge.sh">Demo Playground ↗️</a></strong> <br />
 </p>
 
-### If you're already using [Material UI v5](https://material-ui.com), why not display your images according to the Material guidelines too?
+### If you're already using [Material UI](https://mui.com/material-ui/), why not display your images according to the Material guidelines too?
 
 > Illustrations and photographs may load and transition in three phases at staggered durations, rather than relying on opacity changes alone.
 >
@@ -23,7 +23,19 @@
 ### 1. Install
 
 ```
+pnpm add mui-image
+```
+
+or
+
+```
 npm i mui-image
+```
+
+or
+
+```
+bun add mui-image
 ```
 
 or
@@ -37,10 +49,6 @@ Using TypeScript? Also add [`@types/mui-image`](https://www.npmjs.com/package/@t
 ### 2. Use
 
 ```
-import Image from 'mui-image'
-
-// or
-
 import { Image } from 'mui-image'
 
 // then
@@ -50,7 +58,7 @@ import { Image } from 'mui-image'
 
 ### 3. Profit 💰
 
-_Note: Profits not guaranteed and Material UI v5 is a peer dependency. If you need to support legacy versions of Material UI, use [`material-ui-image`](https://github.com/TeamWertarbyte/material-ui-image) instead. See the [comparison chart](#comparison-with-similar-components) below for more._
+_Note: Profits not guaranteed and Material UI v5+ is a peer dependency. If you need to support legacy versions of Material UI, use [`material-ui-image`](https://github.com/TeamWertarbyte/material-ui-image) instead. See the [comparison chart](#comparison-with-similar-components) below for more._
 
 ## Usage Examples
 
