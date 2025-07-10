@@ -1,6 +1,6 @@
 {
 	"name": "mui-image",
-	"version": "1.0.8",
+	"version": "1.0.9",
 	"description": "Display images as per the Material guidelines. For React apps using Material-UI.",
 	"main": "lib/index.js",
 	"module": "es/index.js",
@@ -57,7 +57,7 @@
 		"loading image"
 	],
 	"engines": {
-		"npm": "^7.24.2",
-		"node": "^12.22.12"
+		"npm": ">=7.24.2",
+		"node": ">=12.22.12"
 	}
 }
