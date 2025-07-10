@@ -10,7 +10,7 @@
 	<img alt="NPM downloads in last 18 months" src="https://img.shields.io/npm/d18m/mui-image?style=flat-square">
 </p>
 <p align="center">
-  <strong><a href="https://mui-image.surge.sh">Demo Playground ↗️</a></strong> <br />
+  <strong><a href="https://benmneb.github.io/mui-image/">Demo Playground ↗️</a></strong> <br />
 </p>
 
 ### If you're already using [Material UI](https://mui.com/material-ui/), why not display your images according to the Material guidelines too?
