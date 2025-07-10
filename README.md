@@ -5,11 +5,12 @@
   The only Material UI image component to satisfy the Material Design guidelines for loading images.
 </p>
 <p align="center">
-  <img src="https://img.shields.io/npm/v/mui-image?style=flat-square" />
-  <img src="https://img.shields.io/bundlephobia/minzip/mui-image?style=flat-square" />
+  <img a;t="NPM version" src="https://img.shields.io/npm/v/mui-image?style=flat-square" />
+	<img alt="NPM package minimized gzipped size" src="https://img.shields.io/bundlejs/size/mui-image?style=flat-square">
+	<img alt="NPM downloads in last 18 months" src="https://img.shields.io/npm/d18m/mui-image?style=flat-square">
 </p>
 <p align="center">
-  <strong><a href="https://mui-image.surge.sh">Demo Playground ↗️</a></strong> <br />
+  <strong><a href="https://benmneb.github.io/mui-image/">Demo Playground ↗️</a></strong> <br />
 </p>
 
 ### If you're already using [Material UI](https://mui.com/material-ui/), why not display your images according to the Material guidelines too?
@@ -171,13 +172,12 @@ Any other props (eg. `sx`, `onLoad`) are passed directly to the native `img` ele
 
 | Feature                       |                                                     `mui-image`                                                      |                                                     `material-ui-image`                                                      |
 | ----------------------------- | :------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------: |
-| Size (minzipped)              | ![npm bundle size](https://img.shields.io/bundlephobia/minzip/mui-image?color=%2343a047&label=%20&style=flat-square) | ![npm bundle size](https://img.shields.io/bundlephobia/minzip/material-ui-image?color=%23b71c1c&label=%20&style=flat-square) |
-| Supports MUI v5               |                                                          ✅                                                          |                                                              ❌                                                              |
+| Size (mingzipped)              | ![bundle size](https://img.shields.io/bundlejs/size/mui-image?color=%2343a047&label=%20&style=flat-square) | ![bundle size](https://img.shields.io/bundlejs/size/material-ui-image?color=%23b71c1c&label=%20&style=flat-square) |
+| Supports MUI v5+              |                                                          ✅                                                          |                                                              ❌                                                              |
 | Fade-in                       |                                                          ✅                                                          |                                                              ✅                                                              |
 | Progressive level adjustments |                                                          ✅                                                          |                                                              ❌                                                              |
 | Suggested duration            |                                                          ✅                                                          |                                                              ✅                                                              |
 | Optional shift animation      |                                                          ✅                                                          |                                                              ❌                                                              |
-| Supports legacy MUI versions  |                                                          ❌                                                          |                                                              ✅                                                              |
 
 ## License
 
