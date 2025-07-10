@@ -23,3 +23,5 @@
 - `npm run build` will build the component for publishing to npm and also bundle the demo app.
 
 - `npm run clean` will delete built resources.
+
+- `npm publish` to publish to npm registry - package.json is pre configured with a "files" whitelist which will only include lib/, es/ and umd/ directories in the npm package, in addition to the usual npm metadata like package.json and README.md.
