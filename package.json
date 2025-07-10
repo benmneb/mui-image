@@ -52,5 +52,9 @@
 		"material design",
 		"react",
 		"loading image"
-	]
+	],
+	"engines": {
+		"npm": "^7.24.2",
+		"node": "^12.22.12"
+	}
 }
